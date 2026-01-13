@@ -1,0 +1,330 @@
+/* ===== Geral ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ===== Cabeçario ===== */
+/* ===== Geral ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ===== Cabeçario ===== */
+.cabecario {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999;
+}
+
+.cabecario .interface {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #010000; /* fundo preto */
+    padding: 10px 40px;
+    font-family: "Montserrat", sans-serif;
+    box-shadow: 0 4px 15px rgba(66, 71, 203, 0.4); /* sombra azul */
+}
+
+.MenuDireita img {
+    height: 40px;
+}
+
+.MenuEsquerda nav ul {
+    display: flex;
+    list-style: none;
+    gap: 40px;
+    margin: 0 200px 0 0;
+}
+
+.MenuEsquerda nav ul li a {
+    color: #fff; /* texto branco pro contraste */
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.1rem;
+    position: relative;
+    padding: 8px 0;
+    transition: color 0.3s ease;
+}
+
+.MenuEsquerda nav ul li a::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 3px;
+    background-color: #ff7e26; /* laranja destaque */
+    transition: width 0.3s ease;
+    border-radius: 2px;
+}
+
+.MenuEsquerda nav ul li a:hover,
+.MenuEsquerda nav ul li a:focus {
+    color: #4247cb; /* muda pra azul no hover */
+}
+
+.MenuEsquerda nav ul li a:hover::after,
+.MenuEsquerda nav ul li a:focus::after {
+    width: 100%;
+}
+
+.MenuEsquerda nav ul li a:focus {
+    outline: none;
+}
+
+/* ===== Formulário ===== */
+.form-container {
+  max-width: 900px;
+  margin: 120px auto 50px auto;
+  background: #fff;
+  padding: 40px 50px;
+  border-radius: 16px;
+  box-shadow: 0 4px 15px rgba(49, 100, 175, 0.2);
+  font-family: "Montserrat", sans-serif;
+}
+
+.form-container h2 {
+  color: #3164af;
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.intro {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 1rem;
+  color: #333;
+  font-family: "Open Sans", sans-serif;
+}
+
+/* ===== Layout dos Campos ===== */
+.form-row {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.form-group {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+label {
+  margin-bottom: 6px;
+  font-weight: 600;
+  color: #3164af;
+}
+
+input,
+select,
+textarea {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.3s, box-shadow 0.3s;
+  font-family: "Open Sans", sans-serif;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: #ff7e26;
+  box-shadow: 0 0 6px rgba(255, 126, 38, 0.4);
+}
+
+textarea {
+  resize: none;
+}
+
+/* ===== Upload de Currículo ===== */
+.file-upload-box {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 2px dashed #ccc;
+  border-radius: 15px;
+  padding: 25px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  background-color: #f9f9f9;
+}
+
+.file-upload-box:hover {
+  border-color: #ff7e26;
+  background-color: #fff6f0;
+}
+
+.file-upload-content {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.upload-icon {
+  font-size: 28px;
+  color: #ff7e26;
+}
+
+.upload-text {
+  color: #3164af;
+  font-weight: 600;
+  cursor: pointer;
+  display: block;
+}
+
+.file-info {
+  font-size: 14px;
+  color: #555;
+  margin-top: 5px;
+}
+
+.file-doc-icon {
+  font-size: 22px;
+  color: #555;
+}
+
+/* Esconde input de arquivo */
+#curriculo {
+  display: none;
+}
+
+/* ===== Checkbox LGPD ===== */
+.checkbox {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 0.9rem;
+  color: #444;
+  font-family: "Open Sans", sans-serif;
+  margin: 10px 0 30px 0;
+}
+
+.checkbox input {
+  margin-top: 4px;
+  accent-color: #3164af;
+}
+
+/* ===== Botão Enviar ===== */
+.submit-btn {
+  display: block;
+  margin: 0 auto;
+  background: #ff7e26;
+  color: #fff;
+  padding: 14px 32px;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 700;
+  font-family: "Montserrat", sans-serif;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(255, 126, 38, 0.3);
+}
+
+.submit-btn:hover {
+  background: #e96f1f;
+  box-shadow: 0 6px 14px rgba(255, 126, 38, 0.4);
+  transform: translateY(-2px);
+}
+
+/* ===== Responsividade ===== */
+@media (max-width: 768px) {
+  .form-container {
+    padding: 25px 20px;
+  }
+
+  .form-row {
+    flex-direction: column;
+  }
+
+  .form-container h2 {
+    font-size: 2.2rem;
+  }
+}
+
+
+
+/* ===== Rodape ===== */
+.RodapeCima {
+  display: flex;
+  padding: 20px 250px;
+}
+
+.CimaEsquerda {
+  flex: 1;
+}
+
+.CimaEsquerda img {
+  max-width: 100px;
+  margin-bottom: 20px;
+}
+
+.CimaMeio {
+  flex: 2;
+  text-align: center;
+}
+
+.CimaMeio h3 {
+  color: #3164af;
+}
+
+.CimaDireito {
+  flex: 1;
+  text-align: end;
+}
+
+.CimaDireito1-1 h3 {
+  color: #3164af;
+}
+
+.CimaDireito1-2 i {
+  border-radius: 20px;
+  color: #3164af;
+  font-size: 30px;
+  margin-right: 10px;
+}
+
+.RodapeMeio {
+  padding: 10px 250px;
+}
+
+.barra {
+  border: 2px solid #3164af;
+}
+
+.RodapeBaixo {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* ===== Responsividade ===== */
+@media (max-width: 768px) {
+  .form-row {
+    flex-direction: column;
+  }
+
+  .RodapeCima,
+  .RodapeMeio {
+    padding: 20px;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .CimaDireito {
+    text-align: center;
+  }
+}

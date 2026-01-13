@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trabalhe Conosco - GuaruLog</title>
+  <link rel="stylesheet" href="TRABALHAMOS.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- ======= Cabeçario ======= -->
+    <header class="cabecario">
+      <div class="interface">
+        <div class="MenuDireita">
+          <img src="../img/Logo-LVS2.png" alt="Logo LVS" />
+        </div>
+        <div class="MenuEsquerda">
+          <nav>
+            <ul>
+              <li><a href="../index.html">Inicio</a></li>
+              <li><a href="../SobreNos/SobreNos.html">Sobre Nós</a></li>
+              <li><a href="../DuvidaFrequente/Duvida.html">Dúvidas Frequentes</a></li>
+              <li><a href="FORM1.html">Trabalhe Conosco</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <!-- ======= Cabeçario ======= -->
+
+  <div class="form-container">
+    <h2>Faça parte da nossa equipe!</h2>
+    <p class="intro">
+      A <strong>GuaruLog</strong> está sempre em busca de profissionais para participar do nosso time.
+      Preencha o formulário abaixo e anexe seu currículo. Assim que surgir uma oportunidade entraremos em contato.
+    </p>
+
+    <form>
+      <div class="form-row">
+        <div class="form-group">
+          <label for="nome">Nome</label>
+          <input type="text" id="nome" name="nome" placeholder="Digite seu nome completo" required>
+        </div>
+        <div class="form-group">
+          <label for="telefone">Telefone</label>
+          <input type="text" id="telefone" name="telefone" placeholder="(11) 99999-9999" required>
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label for="email">E-mail</label>
+          <input type="email" id="email" name="email" placeholder="seu@email.com" required>
+        </div>
+        <div class="form-group">
+          <label for="cep">CEP</label>
+          <input type="text" id="cep" name="cep" placeholder="00000-000" required>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="tipoVeiculo">Tipo de Veículo</label>
+        <select id="tipoVeiculo" name="tipoVeiculo" required>
+          <option value="">Selecione o tipo de veículo</option>
+          <option value="moto">Moto</option>
+          <option value="carro">Carro</option>
+          <option value="van">Van</option>
+        </select>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label for="modeloVeiculo">Modelo do Veículo</label>
+          <input type="text" id="modeloVeiculo" name="modeloVeiculo" placeholder="Ex: Honda Civic">
+        </div>
+        <div class="form-group">
+          <label for="anoVeiculo">Ano do Veículo</label>
+          <input type="number" id="anoVeiculo" name="anoVeiculo" placeholder="2024">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="mensagem">Mensagem</label>
+        <textarea id="mensagem" name="mensagem" rows="4"
+          placeholder="Conte-nos um pouco sobre sua experiência e motivação..."></textarea>
+      </div>
+
+      <!-- Parte do Currículo -->
+      <div class="form-group">
+        <label for="curriculo" class="form-label">Currículo</label>
+        <div class="file-upload-box">
+          <input type="file" id="curriculo" name="curriculo" accept=".doc,.pdf,.png" required>
+          <div class="file-upload-content">
+            <i class="bi bi-upload upload-icon"></i>
+            <div>
+              <label for="curriculo" class="upload-text">Selecionar currículo</label>
+              <p class="file-info">Formatos aceitos: .doc, .pdf ou .png (máx. 10MB)</p>
+            </div>
+          </div>
+          <i class="bi bi-file-earmark-text file-doc-icon"></i>
+        </div>
+      </div>
+
+      <div class="form-group checkbox">
+        <input type="checkbox" id="lgpd" name="lgpd" required>
+        <label for="lgpd">
+          Declaro, para todos os fins, que estou ciente de que a Empresa poderá utilizar os dados fornecidos
+          estritamente
+          para fins comerciais, dentro dos limites legais estipulados pela Lei Geral de Proteção de Dados (Lei nº
+          13.709/2018).
+        </label>
+      </div>
+
+      <button type="submit" class="submit-btn">Enviar Currículo</button>
+    </form>
+  </div>
+
+ <!-- ======= Rodape ======= -->
+    <footer class="Rodape">
+        <div class="RodapeCima">
+
+            <div class="CimaEsquerda">
+                <img src="../img/Logo-LVS3.png" alt="" />
+                <p>
+                    Especialistas em logìstica e transporte com eficiência e segurança
+                </p>
+            </div>
+
+            <div class="CimaMeio">
+                <h3>Contato</h3>
+                <p><i class="bi bi-envelope"></i> teste@gmail.com</p>
+                <p><i class="bi bi-geo-alt"></i> Guarulhos - SP</p>
+            </div>
+
+            <div class="CimaDireito">
+                <div class="CimaDireito1-1">
+                    <h3>Redes Sociais</h3>
+                </div>
+                <div class="CimaDireito1-2">
+                    <i class="bi bi-facebook"></i>
+                    <i class="bi bi-instagram"></i>
+                    <i class="bi bi-whatsapp"></i>
+                </div>
+            </div>
+        </div>
+
+        <div class="RodapeMeio">
+            <div class="barra"></div>
+        </div>
+
+        <div class="RodapeBaixo">
+            todos os direitos reservados
+        </div>
+    </footer>
+</body>
+
+</html>
