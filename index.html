@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet" />
+
+    <link rel="stylesheet" href="style.css" />
+
+    <title>LVS</title>
+</head>
+<!-- arrumar botão do modal para ir na whatapp
+  arrumar os botoes de redes sociais do footer-->
+
+<body>
+    <!-- ======= Cabeçario ======= -->
+    <header class="cabecario">
+        <div class="interface">
+            <div class="MenuDireita">
+                <img src="img/Logo-LVS2.png" alt="Logo LVS" />
+            </div>
+            <div class="MenuEsquerda">
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="SobreNos/SobreNos.html">Sobre Nós</a></li>
+                        <li><a href="DuvidaFrequente/Duvida.html">Dúvidas Frequentes</a></li>
+                        <li><a href="formulario/FORM1.html">Trabalhe Conosco</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <!-- ======= Cabeçario ======= -->
+
+    <!-- ======= Inicio ======= -->
+    <section class="Inicio">
+        <div class="TelaNegra"></div>
+
+        <div class="interface-Inicio">
+            <div class="InicioLeft">
+                <div class="primeiro">
+                    <div class="prim">
+                        <i class="bi bi-box-seam"></i>
+                        Logística Inteligente
+                    </div>
+                </div>
+
+                <div class="segunda">
+                    <h1>Conectando Destinos <span>com Eficiência</span></h1>
+                    <p>
+                        Entregas eficientes e confiáveis, com a agilidade que seu negócio precisa. A LVS garante rastreamento em tempo real e o compromisso de quem é referência em logística rápida e segura.
+                    </p>
+                </div>
+
+                <div class="terceira">
+                    <div class="terce terceira1">
+                        <i class="bi bi-clock"></i>Entrega Garantida
+                    </div>
+                    <div class="terce terceira2">
+                        <i class="bi bi-shield-check"></i>Equipe Especializada
+                    </div>
+                    <div class="terce terceira3">
+                        <i class="bi bi-box-seam"></i>Rastreamento em Tempo Real
+                    </div>
+                </div>
+
+                <div class="quarta">
+                    <button onclick="document.getElementById('servicos').scrollIntoView({ behavior: 'smooth' })">
+                        Saiba Mais
+                    </button>
+                </div>
+            </div>
+
+            <div class="InicioRight"></div>
+        </div>
+    </section>
+    <!-- ======= Inicio ======= -->
+
+        <!-- ======= Serviços ======= -->
+    <section class="servicos" id="servicos">
+        <div class="interface-servico">
+            <div class="cima">
+                <h1>Conheça nossos serviços</h1>
+                <p>Soluções logísticas que unem agilidade, segurança e compromisso.</p>
+            </div>
+
+            <div class="baixo">
+                <div class="servico">
+                    <div class="part1">
+                        <div class="icon"><i class="bi bi-truck"></i></div>
+                        <h4>Logística Dedicada</h4>
+                    </div>
+                    <div class="part2">
+
+                        <p>
+                            Rotas otimizadas de acordo com as necessidades do seu negócio, com foco em agilidade e redução de custos.
+                        </p>
+                    </div>
+                    <div class="part3">
+                        <button data-modal="modal1">
+                            Saiba mais <i class="bi bi-arrow-right"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="servico">
+                    <div class="part1">
+                        <div class="icon"><i class="bi bi-box-seam"></i></div>
+                        <h4>Entrega Reversa</h4>
+                    </div>
+                    <div class="part2">
+
+                        <p>
+                            Devoluções rápidas e seguras, com rastreamento e controle em cada etapa.
+                        </p>
+                    </div>
+                    <div class="part3">
+                        <button data-modal="modal2">
+                            Saiba mais <i class="bi bi-arrow-right"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="servico">
+                    <div class="part1">
+                        <div class="icon"><i class="bi bi-lightning-charge"></i></div>
+                        <h4>Entrega Express</h4>
+                    </div>
+                    <div class="part2">
+
+                        <p>
+                            Quando a urgência é prioridade, a LVS entrega.
+                        </p>
+                    </div>
+                    <div class="part3">
+                        <button data-modal="modal3">
+                            Saiba mais <i class="bi bi-arrow-right"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="servico">
+                    <div class="part1">
+                        <div class="icon"><i class="bi bi-calendar-check"></i></div>
+                        <h4>Coleta Programada</h4>
+                    </div>
+                    <div class="part2">
+
+                        <p>Coletas agendadas com pontualidade e eficiência garantidas.</p>
+                    </div>
+                    <div class="part3">
+                        <button data-modal="modal4">
+                            Saiba mais <i class="bi bi-arrow-right"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- ======= Modais ======= -->
+        <div id="modal1" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <div class="model-1">
+                    <div class="icon"><i class="bi bi-truck"></i></div>
+                    <h3>Logística Dedicada</h3>
+                </div>
+                <div class="model-2">
+                    <div class="model-2-Esquerda">
+                        <h5>Principais Benefícios</h5>
+                        <p>
+                            <i class="bi bi-check2-circle"></i>Roteirização inteligente para reduzir custos e prazos de entrega.
+                        </p>
+                        <p>
+                            <i class="bi bi-check2-circle"></i>Monitoramento em tempo real com acesso total às informações da rota.
+                        </p>
+                        <p>
+                            <i class="bi bi-check2-circle"></i>Integração completa com sistemas ERP e WMS corporativos.
+                        </p>
+                        <p>
+                            <i class="bi bi-check2-circle"></i>Relatórios personalizados com indicadores de desempenho logístico.
+                        </p>
+                    </div>
+                    <div class="model-2-Direita">
+                        <h5>Diferenciais Técnicos</h5>
+                        <p>
+                            <i class="bi bi-check-circle-fill"></i>Cobertura nacional com estrutura própria de atendimento.
+                        </p>
+                        <p>
+                            <i class="bi bi-check-circle-fill"></i>Frota rastreada e equipada com tecnologia de telemetria.
+                        </p>
+                        <p>
+                            <i class="bi bi-check-circle-fill"></i>Equipe especializada em logística e controle de entregas.
+                        </p>
+                        <p>
+                            <i class="bi bi-check-circle-fill"></i>Plataforma digital para gestão de rotas e acompanhamento de performance.
+                        </p>
+                    </div>
+                </div>
+                <div class="model-3">
+                    <div class="info">
+                        <h5></h5>
+                    </div>
+                    <div class="info infor1-1">
+                        <div class="info1">
+                            <h4>Prazo médio:</h4>
+                            <p>2 a 24 horas</p>
+                        </div>
+                        <div class="info1">
+                            <h4>Cobertura:</h4>
+                            <p>Todo o território nacional</p>
+                        </div>
+                        <div class="info1">
+                            <h4>Atendimento:</h4>
+                            <p>24 horas por dia, 7 dias por semana</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="model-4">
+                    <button>Solicitar atendimento personalizado</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="modal2" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <div class="model-1">
+                    <div class="icon"><i class="bi bi-box-seam"></i></div>
+                    <h3>Entrega Reversa</h3>
+                </div>
+                <div class="model-2">
+                    <div class="model-2-Esquerda">
+                        <h5>Principais Benefícios</h5>
+                        <p>
+                            <i class="bi bi-check2-circle"></i>Coleta domiciliar ou em pontos autorizados, conforme necessidade do cliente.
+                        </p>
+                        <p>
+                            <i class="bi bi-check2-circle"></i>Triagem e classificação dos itens devolvidos com rastreabilidade total.
+                        </p>
+                        <p>
+                            <i class="bi bi-check2-circle"></i>Documentação completa e emissão de comprovantes de devolução.
+                        </p>
+                        <p>
+                            <i class="bi bi-check2-circle"></i>Transporte seguro e monitorado até o destino final.
+                        </p>
+                    </div>
+                    <div class="model-2-Direita">
+                        <h5>Diferenciais Técnicos</h5>
+                        <p>
+                            <i class="bi bi-check-circle-fill"></i>Rastreabilidade completa em todas as etapas do processo.
+                        </p>
+                        <p>
+                            <i class="bi bi-check-circle-fill"></i>Redução de custos logísticos em até 30% por meio de roteirização inteligente.</p>
+                        <p>
+                            <i class="bi bi-check-circle-fill"></i>Conformidade com normas fiscais e ambientais aplicáveis.
+                        </p>
+                        <p>
+                            <i class="bi bi-check-circle-fill"></i>Integração com sistemas de gestão (ERP, WMS e plataformas do cliente).
+                        </p>
+                    </div>
+                </div>
+                <div class="model-3">
+                    <div class="info">
+                        <h5></h5>
+                    </div>
+                    <div class="info infor1-1">
+                        <div class="info1">
+                            <h4>Prazo médio:</h4>
+                            <p>2 a 24 horas</p>
+                        </div>
+                        <div class="info1">
+                            <h4>Cobertura:</h4>
+                            <p>Todo o território nacional</p>
+                        </div>
+                        <div class="info1">
+                            <h4>Atendimento:</h4>
+                            <p>24 horas por dia, 7 dias por semana com emissão de nota fiscal de devolução</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="model-4">
+                    <button>Solicitar atendimento personalizado</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="modal3" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <div class="model-1">
+                    <div class="icon"><i class="bi bi-lightning-charge"></i></div>
+                    <h3>Entrega Express</h3>
+                </div>
+                <div class="model-2">
+                    <div class="model-2-Esquerda">
+                        <h5>Principais Benefícios</h5>
+                        <p>
+                            <i class="bi bi-check2-circle"></i>Resposta imediata para demandas urgentes, com coleta e entrega em até 3 horas.
+                        </p>
+                        <p><i class="bi bi-check2-circle"></i>Equipe especializada disponível 24h por dia, 7 dias por semana.</p>
+                        <p>
+                            <i class="bi bi-check2-circle"></i>Acompanhamento em tempo real do status de coleta e entrega.
+                        </p>
+                        <p>
+                            <i class="bi bi-check2-circle"></i>Relatórios detalhados com indicadores de desempenho logístico.
+                        </p>
+                    </div>
+                    <div class="model-2-Direita">
+                        <h5>Diferenciais Técnicos</h5>
+                        <p>
+                           <i class="bi bi-check-circle-fill"></i>Cobertura regional e nacional, com atendimento prioritário.
+                        </p>
+                        <p>
+                            <i class="bi bi-check-circle-fill"></i>Frota rastreada, garantindo segurança e pontualidade.
+                        </p>
+                        <p>
+                            <i class="bi bi-check-circle-fill"></i>Tecnologia de monitoramento em tempo real em todas as etapas.
+                        </p>
+                        <p>
+                            <i class="bi bi-check-circle-fill"></i>Gestão automatizada de rotas para reduzir tempo e custos operacionais.
+                        </p>
+                    </div>
+                </div>
+                <div class="model-3">
+                    <div class="info">
+                        <h5></h5>
+                    </div>
+                    <div class="info infor1-1">
+                        <div class="info1">
+                            <h4>Tempo médio de entrega:</h4>
+                            <p>2 a 4 horas (local) e 24 a 48h (nacional)</p>
+                        </div>
+                        <div class="info1">
+                            <h4>Cobertura:</h4>
+                            <p>Nacional</p>
+                        </div>
+                        <div class="info1">
+                            <h4>Disponibilidade:</h4>
+                            <p>Atendimento 24/7 com suporte em tempo real</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="model-4">
+                    <button>Solicitar atendimento personalizado</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="modal4" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <div class="model-1">
+                    <div class="icon"><i class="bi bi-calendar-check"></i></div>
+                    <h3>Coleta Programada</h3>
+                </div>
+                <div class="model-2">
+                    <div class="model-2-Esquerda">
+                        <h5>Principais Benefícios</h5>
+                        <p>
+                            <i class="bi bi-check2-circle"></i>Agendamento antecipado com mínimo de 24h e total previsibilidade.
+                        </p>
+                        <p>
+                            <i class="bi bi-check2-circle"></i>Janelas de entrega flexíveis, adaptadas à rotina do cliente.
+                        </p>
+                        <p>
+                            <i class="bi bi-check2-circle"></i>Confirmação automática de coleta e entrega com o destinatário.
+                        </p>
+                        <p>
+                            <i class="bi bi-check2-circle"></i>Opção de entregas recorrentes (diárias, semanais ou mensais).
+                        </p>
+                    </div>
+                    <div class="model-2-Direita">
+                        <h5>Sistema de Gestão Online</h5>
+                        <p><i class="bi bi-check-circle-fill"></i>Plataforma digital integrada para acompanhamento das entregas.</p>
+                        <p><i class="bi bi-check-circle-fill"></i>Notificações automáticas em cada etapa do processo.</p>
+                        <p><i class="bi bi-check-circle-fill"></i>Comprovantes digitais e históricos acessíveis em tempo real.</p>
+                        <p><i class="bi bi-check-circle-fill"></i>Suporte técnico especializado para clientes corporativos.</p>
+                    </div>
+                </div>
+                <div class="model-3">
+                    <div class="info">
+                        <h5></h5>
+                    </div>
+                    <div class="info infor1-1">
+                        <div class="info1">
+                            <h4>Prazo Médio:</h4>
+                            <p>24 horas</p>
+                        </div>
+                        <div class="info1">
+                            <h4>Cobertura:</h4>
+                            <p> Personalizada por contrato ou demanda</p>
+                        </div>
+                        <div class="info1">
+                            <h4>Disponibilidade:</h4>
+                            <p>Diária, semanal ou mensal</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="model-4">
+                    <button>Solicitar atendimento personalizado</button>
+                </div>
+            </div>
+        </div>
+        <!-- ======= Modais ======= -->
+    </section>
+    <!-- ======= Serviços ======= -->
+
+    <!-- ======= Áreas de atuações ======= -->
+    <section class="AreaAtuacao">
+        <div class="interface-atuacao">
+            <div class="cima1">
+                <div class="atuacao">
+                    <h1>Área de atuação</h1>
+                    <p>
+                        Cobertura nacional com foco na excelência. Selecione uma região para
+                        conhecer nossa área de atuação
+                    </p>
+                </div>
+                <div class="regioes">
+                    <button class="btn-regiao" data-regiao="centro-oeste">
+                        Centro-Oeste
+                    </button>
+                    <button class="btn-regiao" data-regiao="nordeste">Nordeste</button>
+                    <button class="btn-regiao" data-regiao="norte">Norte</button>
+                    <button class="btn-regiao" data-regiao="sudeste">Sudeste</button>
+                    <button class="btn-regiao" data-regiao="sul">Sul</button>
+                </div>
+            </div>
+            <div class="interface-maps">
+                <div class="meio1">
+                    <div class="meio1-1">
+                        <div class="botoes-estados" id="botoes-estados">
+                            <h1><i class="bi bi-geo-alt"></i>Estado -</h1>
+                            Selecione uma região
+                        </div>
+                    </div>
+                    <div class="meio1-2">
+                        <div class="mapa" id="mapa-container">Mapa</div>
+                        <div class="MapaContato">
+                            <div class="MapaContatoEsquer">
+                                <h4>precisa de entrega em ?</h4>
+                                <p>Nossa equipe esta pronta para atender sua região</p>
+                            </div>
+                            <div class="MapaContatoDirei">
+                                <button>Consultar Especialistas</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="baixo1">
+                <div class="BaixoInfo">
+                    <div class="iconestado"><i class="bi bi-map-fill"></i></div>
+                    <div class="BaixoInfo1">27</div>
+                    <div class="BaixoInfo2">Estados</div>
+                    <div class="BaixoInfo3">Cobertura nacional</div>
+                </div>
+                <div class="BaixoInfo">
+                    <div class="iconestado"><i class="bi bi-geo-alt-fill"></i></div>
+                    <div class="BaixoInfo1">500+</div>
+                    <div class="BaixoInfo2">Cidades</div>
+                    <div class="BaixoInfo3">atendidas regularmente</div>
+                </div>
+                <div class="BaixoInfo">
+                    <div class="iconestado"><i class="bi bi-clock-fill"></i></div>
+                    <div class="BaixoInfo1">48h</div>
+                    <div class="BaixoInfo2">Tempo Máximo</div>
+                    <div class="BaixoInfo3">Para qualquer destino</div>
+                </div>
+                <div class="BaixoInfo">
+                    <div class="iconestado"><i class="bi bi-telephone-fill"></i></div>
+                    <div class="BaixoInfo1">24/7</div>
+                    <div class="BaixoInfo2">Atendimento</div>
+                    <div class="BaixoInfo3">Cobertura nacional</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ======= Áreas de atuações ======= -->
+
+    <!-- ======= Procura ======= -->
+<section class="procura">
+    <div class="procura-container">
+
+        <h1>O melhor que você procura</h1>
+        <p class="subtitulo">
+            Conectamos empresas a uma operação logística confiável,
+            rápida e com cobertura nacional
+        </p>
+
+        <div class="cards-info">
+            <div class="card">
+                <i class="bi bi-headset"></i>
+                <h3>20+</h3>
+                <span>Pessoas no time de suporte</span>
+            </div>
+
+            <div class="card">
+                <i class="bi bi-geo-alt-fill"></i>
+                <h3>500+</h3>
+                <span>Cidades atendidas</span>
+            </div>
+
+            <div class="card">
+                <i class="bi bi-clock"></i>
+                <h3>48h</h3>
+                <span>Tempo máximo para qualquer destino</span>
+            </div>
+
+            <div class="card">
+                <i class="bi bi-telephone-fill"></i>
+                <h3>24/7</h3>
+                <span>Atendimento nacional</span>
+            </div>
+        </div>
+
+        <p class="texto-final">
+            Somos a escolha ideal para empresas que precisam de velocidade,
+            segurança e controle total da operação.
+        </p>
+
+        <button class="btn-proposta">Solicitar proposta personalizada</button>
+
+    </div>
+</section>
+    <!-- ======= Procura ======= -->
+
+
+
+    
+
+    <!-- ======= Frota ======= -->
+    <section class="NossaFrota">
+        <div class="interface-frota">
+            <div class="NossaFrotaEsquerdo">
+                <div class="FrotaImagem"></div>
+            </div>
+            <div class="NossaFrotaDireito">
+                <div class="FrotaCima">
+                    <h1>Nossa Frota Profissional</h1>
+                    <p>
+                        Investimos em equipamentos de alta qualidade para garantir que suas
+                        entregas sejam realizadas com máxima segurança e eficiência.
+                    </p>
+                </div>
+                <div class="FrotaMeio">
+                    <div class="FrotaMeio1">
+                        <h3>Equipamento de Segurança</h3>
+                        <p>
+                            Todos os motoboys utilizam equipamentos de proteção individual
+                            completos
+                        </p>
+                    </div>
+                    <div class="FrotaMeio1">
+                        <h3>Disponibilidade 24/7</h3>
+                        <p>
+                            Frota ativa 24 horas por dia, 7 dias da semana para suas
+                            necessidades
+                        </p>
+                    </div>
+                    <div class="FrotaMeio1">
+                        <h3>Rastreamento GPS</h3>
+                        <p>Todas as motos possuem sistema de rastreamento em tempo real</p>
+                    </div>
+                    <div class="FrotaMeio1">
+                        <h3>Manutenção Preventiva</h3>
+                        <p>
+                            Revisões regulares garantem máxima confiabilidade das entregas
+                        </p>
+                    </div>
+                </div>
+
+                <div class="FrotaBaixo">
+                    <div class="FrotaBaixoDiv">
+                        <h3>300+</h3>
+                        <p>Motos na frota</p>
+                    </div>
+                    <div class="FrotaBaixoDiv">
+                        <h3>99.8%</h3>
+                        <p>Taxa de Disponibilidade</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ======= Frota ======= -->
+
+    <!-- ======= Entre em contato ======= -->
+    <section class="EntreContato">
+        <div class="ContatoCima">
+            <h3>Entre em Contato</h3>
+            <p>
+                Estamos pronto para atender você. Preencha o formulário ou entre em
+                contato diretamente
+            </p>
+        </div>
+
+        <div class="ContatoMeio">
+
+            <div class="ContatoMeioEsquerda">
+                <div class="FaleConosco">
+                    <div class="Conosco conosco1">Fale Conosco</div>
+                    <div class="conosco2">
+                        <div class="conosco1-1">
+                            <i class="bi bi-telephone"></i>
+                        </div>
+                        <div class="conosco1-2">
+                            <p>Telefone</p>
+                            <p>(11) 99999-9999</p>
+                        </div>
+                    </div>
+                    <div class="conosco2">
+                        <div class="conosco1-1">
+                            <i class="bi bi-envelope"></i>
+                        </div>
+                        <div class="conosco1-2">
+                            <p>E-mail</p>
+                            <p>teste@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="conosco2">
+                        <div class="conosco1-1">
+                            <i class="bi bi-clock"></i>
+                        </div>
+                        <div class="conosco1-2">
+                            <p>Horario de atendimento</p>
+                            <p>Seg à Sex: 8h às 18h</p>
+                            <p>Sáb: 8h às 12h</p>
+                        </div>
+                    </div>
+                    <div class="conosco2">
+                        <div class="conosco1-1">
+                            <i class="bi bi-geo-alt"></i>
+                        </div>
+                        <div class="conosco1-2">
+                            <p>Nossa Localização</p>
+                            <p>Guarulhos - São Paulo</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="ContatoMeioDireita">
+                <div class="formulario">
+                    <form action="">
+                        <div class="form-group">
+                            <label for="nome">Nome completo</label>
+                            <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required />
+                        </div>
+                        <div class="form-group">
+                            <label for="email">E-mail</label>
+                            <input type="email" id="email" name="email" placeholder="Digite seu e-mail" required />
+                        </div>
+                        <div class="form-group">
+                            <label for="telefone">Telefone</label>
+                            <input type="tel" id="telefone" name="telefone" placeholder="Digite seu telefone"
+                                required />
+                        </div>
+                        <div class="form-group">
+                            <label for="interesse">Interesse</label>
+                            <select id="interesse" name="interesse" required>
+                                <option value="">Selecione um serviço</option>
+                                <option value="servico1">Serviço 1</option>
+                                <option value="servico2">Serviço 2</option>
+                                <option value="servico3">Serviço 3</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="mensagem">Mensagem</label>
+                            <textarea id="mensagem" name="mensagem" placeholder="Digite sua mensagem" rows="4"
+                                required></textarea>
+                        </div>
+                        <button type="submit">Enviar Mensagem <i class="bi bi-send"></i></button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="ContatoBaixo">
+            <div class="ContatoBaixo1">Resposta garantida em 24 horas</div>
+        </div>
+    </section>
+    <!-- ======= Entre em contato ======= -->
+
+    <!-- ======= Rodape ======= -->
+    <footer class="Rodape">
+        <div class="RodapeCima">
+
+            <div class="CimaEsquerda">
+                <img src="../img/Logo-LVS3.png" alt="" />
+                <p>
+                    Especialistas em logìstica e transporte com eficiência e segurança
+                </p>
+            </div>
+
+            <div class="CimaMeio">
+                <h3>Contato</h3>
+                <p><i class="bi bi-envelope"></i> teste@gmail.com</p>
+                <p><i class="bi bi-geo-alt"></i> Guarulhos - SP</p>
+            </div>
+
+            <div class="CimaDireito">
+                <div class="CimaDireito1-1">
+                    <h3>Redes Sociais</h3>
+                </div>
+                <div class="CimaDireito1-2">
+                    <i class="bi bi-facebook"></i>
+                    <i class="bi bi-instagram"></i>
+                    <i class="bi bi-whatsapp"></i>
+                </div>
+            </div>
+        </div>
+
+        <div class="RodapeMeio">
+            <div class="barra"></div>
+        </div>
+
+        <div class="RodapeBaixo">
+            todos os direitos reservados
+        </div>
+    </footer>
+
+</body>
+<script src="inicio.js"></script>
+
+</html>

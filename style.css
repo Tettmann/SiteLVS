@@ -1,0 +1,1228 @@
+/* ===== Geral ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ===== Cabeçario ===== */
+.cabecario {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999;
+}
+
+/* container do header */
+.cabecario .interface {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #010000; /* fundo preto */
+    padding: 10px 40px;
+    font-family: "Montserrat", sans-serif;
+
+    /* sombra externa azul */
+    box-shadow: 0 4px 15px rgba(66, 71, 203, 0.4);
+
+    /* necessário pro efeito */
+    overflow: hidden;
+}
+
+/* clareamento somente nas bordas */
+.cabecario .interface::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+}
+
+/* ===== Logo ===== */
+.MenuDireita {
+    padding: 6px 12px;
+    border-radius: 6px;
+}
+
+.MenuDireita img {
+    height: 40px;
+    filter:
+        drop-shadow(0 0 4px rgba(255, 255, 255, 1))
+        drop-shadow(0 0 10px rgba(255, 255, 255, 0.9))
+        drop-shadow(0 0 18px rgba(255, 255, 255, 0.8));
+}
+/* ===== Menu ===== */
+.MenuEsquerda nav ul {
+    display: flex;
+    list-style: none;
+    gap: 40px;
+    margin: 0 200px 0 0;
+    padding: 0;
+}
+
+.MenuEsquerda nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.1rem;
+    position: relative;
+    padding: 8px 0;
+    transition: color 0.3s ease;
+}
+
+/* underline animado */
+.MenuEsquerda nav ul li a::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 3px;
+    background-color: #ff7e26;
+    border-radius: 2px;
+    transition: width 0.3s ease;
+}
+
+/* hover */
+.MenuEsquerda nav ul li a:hover,
+.MenuEsquerda nav ul li a:focus {
+    color: #4247cb;
+}
+
+.MenuEsquerda nav ul li a:hover::after,
+.MenuEsquerda nav ul li a:focus::after {
+    width: 100%;
+}
+
+.MenuEsquerda nav ul li a:focus {
+    outline: none;
+}
+
+
+
+/* ===== Inicio ===== */
+.Inicio {
+    position: relative;
+    background-image: url(img/motobranca\ LVS.png);
+    background-size: cover;
+    background-position: 90% center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    color: #fff;
+    overflow: hidden;
+}
+
+.TelaNegra {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(1, 0, 0, 1) 0%, rgba(1, 0, 0, 0.3) 100%);
+    z-index: 1;
+}
+
+.Inicio>.interface-Inicio>*:not(.TelaNegra) {
+    position: relative;
+    z-index: 2;
+}
+
+.interface-Inicio {
+    display: flex;
+    height: 100%;
+}
+
+.InicioLeft {
+    width: 50%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 40px;
+}
+
+.InicioRight {
+    width: 50%;
+    height: 100vh;
+}
+
+.primeiro {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 30px;
+    font-size: 20px;
+}
+
+.prim {
+    border: 1px solid #ffffff4b;
+    border-radius: 60px;
+    background-color: #ffffff2d;
+    padding: 5px 10px;
+    display: flex;
+    align-items: center;
+}
+
+.primeiro i {
+    margin-right: 10px;
+    color: #4247cb;
+    /* azul */
+    font-size: 30px;
+}
+
+.segunda h1 {
+    font-size: 60px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.segunda h1 span {
+    display: block;
+    color: #ff7e26;
+    /* laranja destaque */
+}
+
+.segunda p {
+    width: 700px;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.terceira {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 30px;
+    font-size: 20px;
+}
+
+.terce {
+    border: 1px solid #ffffff4b;
+    border-radius: 60px;
+    background-color: #ffffff2d;
+    padding: 5px 10px;
+    display: flex;
+    align-items: center;
+}
+
+.terce i {
+    margin-right: 10px;
+    color: #4247cb;
+    /* azul */
+    font-size: 30px;
+}
+
+.quarta button {
+    position: relative;
+    padding: 15px 70px;
+    border-radius: 12px;
+    background: #ff7e26;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 700;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 0 0 rgba(255, 126, 38, 0);
+    transition: box-shadow 0.3s ease;
+}
+
+/* brilho ao passar o mouse */
+.quarta button:hover {
+    box-shadow: 
+        0 0 10px rgba(255, 126, 38, 0.6),
+        0 0 20px rgba(255, 126, 38, 0.4),
+        0 0 30px rgba(255, 126, 38, 0.2);
+}
+
+/* clique */
+.quarta button:active {
+    box-shadow: 
+        0 0 6px rgba(255, 126, 38, 0.6);
+}
+
+/* ===== Serviços ===== */
+
+.servicos {
+    background-color: #f9f9f9;
+    padding: 80px 0;
+    position: relative;
+}
+
+.interface-servico {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 30px;
+}
+
+.cima h1 {
+    color: #4247cb;
+    font-size: 48px;
+    font-weight: 800;
+    margin-bottom: 15px;
+}
+
+.cima p {
+    font-size: 22px;
+    color: #010000;
+    max-width: 900px;
+}
+
+.baixo {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 50px;
+}
+
+.servico {
+    background-color: #fff;
+    border-radius: 20px;
+    width: 300px;
+    height: 320px;
+    padding: 20px;
+    box-shadow: 0 6px 20px rgba(66, 71, 203, 0.2);
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.servico:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(255, 126, 38, 0.4);
+}
+
+.part1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.icon {
+    background: linear-gradient(135deg, #ff7e26);
+    width: 55px;
+    height: 55px;
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 28px;
+    transition: transform 0.3s ease;
+}
+
+.servico:hover .icon {
+    transform: scale(1.15);
+}
+
+.part1 h4 {
+    font-size: 20px;
+    font-weight: 700;
+    color: #010000;
+}
+
+.part2 p {
+    font-size: 16px;
+    color: #333;
+    line-height: 1.5;
+}
+
+.part3 button {
+    width: 100%;
+    height: 45px;
+    border-radius: 10px;
+    background-color: transparent;
+    color: #4247cb;
+    font-weight: 700;
+    border: 2px solid #4247cb;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.part3 button:hover {
+    background: linear-gradient(135deg, #4247cb);
+    color: #fff;
+    border: none;
+    transform: scale(1.03);
+}
+
+/* ===== Modais ===== */
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+    animation: fadeIn 0.3s ease;
+}
+
+.modal-content {
+    background: #fff;
+    color: #010000;
+    padding: 25px 30px;
+    border-radius: 15px;
+    width: 85%;
+    max-width: 1000px;
+    height: 650px;
+    overflow-y: none;
+    position: relative;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 28px;
+    cursor: pointer;
+    color: #4247cb;
+    transition: 0.3s;
+}
+
+.close:hover {
+    color: #ff7e26;
+}
+
+.model-1 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.model-1 .icon {
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(135deg, #ff7e26);
+}
+
+.model-1 h3 {
+    color: #4247cb;
+    font-weight: 700;
+}
+
+.model-2 {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 20px;
+}
+
+.model-2-Esquerda,
+.model-2-Direita {
+    flex: 1;
+    text-align: left;
+}
+
+.model-2 h5 {
+    color: #ff7e26;
+    margin-bottom: 10px;
+}
+
+.model-2 p {
+    line-height: 1.4;
+    color: #010000;
+}
+
+.model-2 i {
+    color: #4247cb;
+    margin-right: 6px;
+}
+
+.model-3 {
+    background-color: #f1f1f1;
+    border-radius: 15px;
+    padding: 20px;
+    margin-bottom: 20px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* título */
+.model-3 h5 {
+    color: #4247cb;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* container das infos */
+.infor1-1 {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    flex-wrap: wrap;
+    gap: 10px;
+    width: 100%;
+}
+
+/* cada bloco */
+.info1 {
+    flex: 1 1 250px;
+    max-width: 300px;
+    text-align: center;
+}
+
+/* títulos */
+.info1 h4 {
+    font-size: 18px;
+    color: #010000;
+    margin-bottom: 8px;
+}
+
+/* textos */
+.info1 p {
+    font-size: 16px;
+    color: #4247cb;
+    font-weight: 600;
+}
+.model-4 {
+    display: flex;
+    justify-content: center;
+}
+
+.model-4 button {
+    width: 90%;
+    height: 45px;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #ff7e26);
+    color: #fff;
+    border: none;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.model-4 button:hover {
+    background: linear-gradient(135deg, #4247cb, #ff7e26);
+    transform: translateY(-3px);
+}
+
+.modal.active {
+    display: flex;
+}
+
+/* ===== Animação ===== */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ===== Área de Atuação ===== */
+section.AreaAtuacao {
+    background-color: #cccccc33;
+    padding: 10px 0;
+}
+
+.interface-atuacao {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ----- Título e descrição ----- */
+.cima1 {
+    text-align: center;
+}
+
+.atuacao h1 {
+    color: #4247cb;
+    font-size: 48px;
+    font-weight: 800;
+}
+
+.atuacao p {
+    font-size: 22px;
+    color: #010000;
+    max-width: 900px;
+}
+
+/* ----- Botões das regiões ----- */
+.regioes {
+    text-align: center;
+}
+
+.regioes button {
+    margin: 5px;
+    padding: 10px 18px;
+    border: 2px solid #4247cb;
+    background: transparent;
+    color: #4247cb;
+    font-weight: 700;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.regioes button:hover,
+.btn-regiao.ativo {
+    background: linear-gradient(135deg,  #ff7e26);
+    color: #fff;
+    border: none;
+    transform: translateY(-2px);
+}
+
+/* ----- Estrutura principal ----- */
+.interface-maps {
+    width: 100%;
+    height: 60vh;
+}
+
+.meio1 {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+/* ----- Lado esquerdo (botões dos estados) ----- */
+.meio1-1 {
+    width: 35%;
+    padding: 2% 1% 2% 8%;
+}
+
+.botoes-estados {
+    border: 1px solid #00000021;
+    background-color: #fff;
+    height: 100%;
+    border-radius: 12px;
+    padding: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.botoes-estados:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(66, 71, 203, 0.25);
+}
+
+.botoes-estados h1 {
+    color: #4247cb;
+    font-size: 28px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+#botoes-estados {
+    max-height: 100%;
+    overflow-y: auto;
+    padding: 10px;
+}
+
+/* ----- Botões dos estados ----- */
+.btn-estado {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    width: 97%;
+    height: 80px;
+    margin: 5px;
+    padding-left: 20px;
+    background-color: transparent;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-estado:hover {
+    background-color: #f1f1f1;
+    transform: translateX(5px);
+}
+
+.btn-estado.ativo {
+    background: linear-gradient(135deg, #ff7e26);
+    color: #fff;
+}
+
+.btn-estado.ativo .estado-nome,
+.btn-estado.ativo .estado-cidades {
+    color: #fff;
+}
+
+.estado-nome {
+    font-size: 18px;
+    font-weight: 700;
+    color: #4247cb;
+}
+
+.estado-cidades {
+    font-size: 16px;
+    color: #4247cb;
+}
+
+/* ----- Mapa ----- */
+.meio1-2 {
+    width: 65%;
+    padding: 2% 10% 3% 2%;
+}
+
+.mapa {
+    border: 1px solid #00000021;
+    border-radius: 12px;
+    background-color: #fff;
+    height: 78%;
+    width: 100%;
+    margin-bottom: 3%;
+    padding: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.mapa:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(255, 126, 38, 0.25);
+}
+
+/* ----- Contato abaixo do mapa ----- */
+.MapaContato {
+    height: 20%;
+    display: flex;
+    background: linear-gradient(135deg, #ff7e26);
+    border-radius: 12px;
+    color: #fff;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+.MapaContato:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(255, 126, 38, 0.35);
+}
+
+.MapaContatoEsquer {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+}
+
+.MapaContatoDirei {
+    width: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.MapaContatoDirei button {
+    padding: 6px 22px;
+    border: none;
+    border-radius: 8px;
+    background: #fff;
+    color: #4247cb;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.MapaContatoDirei button:hover {
+    background: linear-gradient(135deg, #4247cb, #ff7e26);
+    color: #fff;
+}
+
+/* ----- Cards de informações ----- */
+.baixo1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    padding: 30px 0;
+}
+
+.BaixoInfo {
+    border: 1px solid #00000021;
+    border-radius: 12px;
+    width: 200px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.BaixoInfo:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 25px rgba(66, 71, 203, 0.25);
+}
+
+.iconestado i {
+    font-size: 25px; /* ajuste aqui */
+    color: #4247cb;
+}
+
+.BaixoInfo1,
+.BaixoInfo2 {
+    color: #4247cb;
+    font-weight: 700;
+    font-size: 20px;
+}
+
+
+
+/* ===== Procura ===== */
+section.procura {
+    background: #cccccc93;
+    padding: 70px 20px;
+}
+
+.procura-container {
+    max-width: 1200px;
+    margin: auto;
+    text-align: center;
+}
+
+.procura h1 {
+    color: #4247cb;
+    font-size: 46px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.subtitulo {
+    font-size: 20px;
+    max-width: 800px;
+    margin: 0 auto 50px;
+    color: #010000;
+}
+
+/* Cards */
+.cards-info {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    margin-bottom: 50px;
+}
+
+.card {
+    background: #fff;
+    padding: 40px 20px;
+    border-radius: 14px;
+    border: 1px solid #00000020;
+    box-shadow: 10px 10px 20px #4247cb33;
+    transition: 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 15px 15px 25px #4247cb66;
+}
+
+.card i {
+    font-size: 48px;
+    color: #ff7e26;
+    margin-bottom: 15px;
+}
+
+.card h3 {
+    color: #ff7e26;
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.card span {
+    font-size: 16px;
+    color: #010000;
+}
+
+/* Texto final */
+.texto-final {
+    font-size: 18px;
+    max-width: 800px;
+    margin: 0 auto 35px;
+}
+
+/* Botão */
+.btn-proposta {
+    background: #4247cb;
+    color: #fff;
+    border: none;
+    padding: 16px 40px;
+    border-radius: 30px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-proposta:hover {
+    background: #ff7e26;
+}
+
+/* ===== Frota ===== */
+
+.interface-frota {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    padding: 30px 0;
+    flex-wrap: wrap;
+}
+
+.NossaFrotaEsquerdo {
+    max-width: 500px;
+    color: #010000;
+}
+
+.NossaFrotaEsquerdo h2 {
+    background: linear-gradient(90deg, #4247cb);
+    -webkit-text-fill-color: transparent;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.NossaFrotaEsquerdo p {
+    font-size: 1.1rem;
+    line-height: 1.5;
+    color: #010000;
+}
+
+.FrotaImagem {
+    width: 500px;
+    height: 300px;
+    border-radius: 30px;
+    background-image: url(img/Frota.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border: 2px solid #010000;
+    box-shadow: 0 10px 25px rgba(1, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.FrotaImagem:hover {
+    transform: scale(1.03);
+    box-shadow: 0 15px 35px rgba(1, 0, 0, 0.4);
+}
+
+.FrotaCima {
+    padding-top: 20px;
+    text-align: center;
+    justify-items: center;
+    height: 30%;
+}
+
+.FrotaCima h1 {
+    font-size: 50px;
+    font-weight: 700;
+    color: #4247cb;
+}
+
+.FrotaCima p {
+    width: 470px;
+    font-size: 20px;
+    color: #010000;
+}
+
+.FrotaMeio {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    grid-template-rows: repeat(2, auto);
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    height: 50%;
+}
+
+.FrotaMeio1 {
+    border: 1px solid #01000033;
+    border-radius: 10px;
+    width: 300px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    padding: 0 20px;
+    text-align: center;
+    margin-top: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.FrotaMeio1 h3 {
+    color: #ff7e26;
+    font-size: 23px;
+    font-weight: 700;
+}
+
+.FrotaMeio1 p {
+    font-size: 18px;
+    color: #010000;
+}
+
+.FrotaMeio1:hover,
+.FrotaBaixoDiv:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(66, 71, 203, 0.6);
+}
+
+.FrotaBaixo {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    align-items: center;
+    height: 20%;
+}
+
+.FrotaBaixoDiv {
+    text-align: center;
+    border: 1px solid #01000033;
+    border-radius: 10px;
+    width: 200px;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    background-color: #fff;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.FrotaBaixoDiv h3 {
+    color: #ff7e26;
+    font-weight: 700;
+}
+
+/* ===== Frota ===== */
+
+
+/* ===== Entrar em Contato ===== */
+.EntreContato {
+    height: 105vh;
+    background-color: #cccccc33;
+}
+
+.ContatoCima {
+    text-align: center;
+    padding: 40px 0 0 0;
+}
+
+.ContatoCima h3 {
+    color: #4247cb;
+    font-weight: 700;
+    font-size: 40px;
+}
+
+.ContatoCima p {
+    font-size: 20px;
+    color: #010000;
+}
+
+.ContatoMeio {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.ContatoMeioEsquerda {
+    flex: 50%;
+    padding: 2% 2% 2% 12%;
+    min-width: 350px;
+}
+
+.FaleConosco {
+    background: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(66, 71, 203, 0.4);
+    font-family: "Montserrat", sans-serif;
+}
+
+.conosco1 {
+    margin: 10px;
+}
+
+.Conosco {
+    text-align: center;
+    font-size: 25px;
+    font-weight: 700;
+    color: #ff7e26;
+    padding: 20px;
+}
+
+.conosco2 {
+    margin: 10px;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+}
+
+.conosco1-1 {
+    background-color: #ff7e26;
+    width: 50px;
+    height: 50px;
+    border: none;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    color: #fff;
+}
+
+.conosco1-2 {
+    margin-left: 20px;
+    line-height: 1.3;
+    color: #010000;
+}
+
+.ContatoMeioDireita {
+    flex: 50%;
+    padding: 2% 12% 2% 2%;
+    min-width: 350px;
+}
+
+.ContatoBaixo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ContatoBaixo1 {
+    border: 1px solid #010000;
+    background-color: #4247cb73;
+    color: #4247cb;
+    font-size: 20px;
+    text-align: center;
+    width: 330px;
+    border-radius: 15px;
+    padding: 5px 0;
+}
+
+
+.formulario {
+    background: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(66, 71, 203, 0.4);
+    font-family: "Montserrat", sans-serif;
+}
+
+.formulario label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #ff7e26;
+}
+
+.formulario input,
+.formulario select,
+.formulario textarea {
+    width: 100%;
+    padding: 12px 15px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    color: #010000;
+}
+
+.formulario input:focus,
+.formulario select:focus,
+.formulario textarea:focus {
+    border-color: #ff7e26;
+    box-shadow: 0 0 8px rgba(255, 126, 38, 0.4);
+    outline: none;
+}
+
+.formulario button {
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(90deg, #ff7e26);
+    color: #fff;
+    font-size: 18px;
+    font-weight: 700;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.formulario button i {
+    margin-left: 15px;
+}
+
+.formulario button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(66, 71, 203, 0.5);
+}
+
+/* ===== Entrar em Contato ===== */
+
+
+/* ===== Rodape ===== */
+.RodapeCima {
+    display: flex;
+    padding: 20px 250px;
+}
+
+.CimaEsquerda {
+    flex: 1;
+}
+
+.CimaEsquerda img {
+    max-width: 100px;
+    margin-bottom: 20px;
+}
+
+.CimaMeio {
+    flex: 2;
+    text-align: center;
+}
+
+.CimaMeio h3 {
+    color: #3164af;
+}
+
+.CimaDireito {
+    flex: 1;
+    text-align: end;
+}
+
+.CimaDireito1-1 h3 {
+    color: #3164af;
+}
+
+.CimaDireito1-2 i {
+    border-radius: 20px;
+    color: #3164af;
+    font-size: 30px;
+    margin-right: 10px;
+}
+
+.RodapeMeio {
+    padding: 10px 250px;
+}
+
+.barra {
+    border: 2px solid #3164af;
+}
+
+.RodapeBaixo {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* ===== Rodape ===== */
